@@ -10,6 +10,7 @@ describe('User Service', () => {
         })
         expect(result.current.fetchingUsers).toBe(true);
         await waitForNextUpdate();
+        expect(result.current.fetchingUsers).toBe(false);
         expect(result.current.users).toEqual(sampleUsers)
     });
 
