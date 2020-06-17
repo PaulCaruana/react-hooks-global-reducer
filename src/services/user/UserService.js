@@ -1,6 +1,6 @@
 import { dispatch, useGlobalState } from "../Store";
 
-const sampleUsers = [
+export const sampleUsers = [
     {
         id: 1,
         name: "Paul",

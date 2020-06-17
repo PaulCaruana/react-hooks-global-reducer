@@ -1,9 +1,9 @@
 import useCounter from "../CounterService";
-import {renderHook, act} from '@testing-library/react-hooks'
+import {renderHook, act} from '@testing-library/react-hooks';
 
-describe('startup spec', () => {
+describe('Counter Spec', () => {
     beforeEach(() => {
-        const {result} = renderHook(() => useCounter())
+        const {result} = renderHook(() => useCounter());
 
         act(() => {
             result.current.initialize();
@@ -11,20 +11,20 @@ describe('startup spec', () => {
     });
 
     test('should increment counter', () => {
-        const {result} = renderHook(() => useCounter())
+        const {result} = renderHook(() => useCounter());
 
         act(() => {
-            result.current.increment()
+            result.current.increment();
         })
-        expect(result.current.count).toBe(1)
+        expect(result.current.count).toBe(1);
     })
 
     test('should decrement counter', () => {
-        const {result} = renderHook(() => useCounter())
+        const {result} = renderHook(() => useCounter());
 
         act(() => {
-            result.current.decrement()
+            result.current.decrement();
         })
-        expect(result.current.count).toBe(-1)
+        expect(result.current.count).toBe(-1);
     })
 });
