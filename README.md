@@ -49,9 +49,14 @@ yarn start
 ```
  
  ## Running the tests
- ```
- yarn test
- ```
+```
+yarn test
+```
+  
+ ## Build
+```
+yarn build
+```
  
  ## Author
  
