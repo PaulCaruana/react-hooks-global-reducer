@@ -1,71 +1,62 @@
- Stage 1: Global State with fetch - https://codesandbox.io/s/3jxcd
+# React Redux with hooks CRUD example
 
+## Stage I Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An in-memory React Redux CRUD application. The purpose of this code is to demonstrate how to
+design Redux without the drawbacks. No Redux plumbling code, pure functions, loosely coupled components
+with SOLID design principles.
 
-## Available Scripts
+For a fully functional API CRUD client / server application with extra features please see Stage II at
+https://github.com/PaulCaruana/react-hooks-global-reducer-server.
 
-In the project directory, you can run:
+### Background and design
 
-### `yarn start`
+This purpose of this code is to show how to
+develop a simple to use CRUD React application and counter logic without 
+the pitfalls Redux. The following constraints and design practices 
+have been employed:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Using hooks for both Global and local state with no need for Providers 
+or passing state to unnecessary components.
+- No Redux boilerplate code, no React classes and no HOC are required. 
+Just pure functional components.
+- Separation of data from presentation layer. This means that containers 
+and components are Redux agnostic and contain no Redux statements (such as 'dispatch') .
+- Provide the advantages of Redux design ensuring processing is predictable in addition to
+enforcing immutability which makes code efficient and maintainable.
+- Debugging in development, give to ability to test code with Redux time travel browser extension as well as logging
+Redux state to console.
+- As per MVC framework separate view, business logic and data access.
+This design principle promotes separation of concerns that makes code easier to understand and test.
+- Promote re-use by providing tested generic / abstract and encapulated classes that can be overridden 
+and extended.
+- Above all, the code must be designed and structured to be easy to develop and maintained.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Prerequisites
+ 
+Please ensure that the latest version of NPM and NodeJs are installed 
+ 
+## Installing
+ 
+```
+yarn 
+```
+ 
+## Run application
+ 
+```
+yarn start
+```
+ 
+ ## Running the tests
+ ```
+ yarn test
+ ```
+ 
+ ## Author
+ 
+ **Paul Caruana** 
+ 
+ ## Demo
+ 
+ TBA
